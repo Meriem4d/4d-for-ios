@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: '4D for iOS' /* title for your website */,
   tagline: 'Easily create and deploy custom native iOS apps',
-  url: 'https://doc4d.github.io' /* your website url */,
+  url: 'https://developer.4d.com' /* your website url */,
   baseUrl: '/4d-for-ios/18/' /* base url for your project */,
 
   // Used for publishing and more
