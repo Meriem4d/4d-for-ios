@@ -25,7 +25,7 @@ href="../assets/en/customize-with-xcode/ContactStarter.zip">STARTER PROJECT</a>
 
 ## STEP 1. Generate your iOS Project
 
-* If your haven't built your project yet, go to step 2.
+* If you haven't built your project yet, go to step 2.
 * If you've already built your project, go to step 3.
 
 ## STEP 2. Build your Project
