@@ -5,11 +5,11 @@ title: Defining your first action
 
 In this tutorial, we are going to work on a **Tasks iOS app** and see how to deal with actions in this app.
 
-Basically what we want to do in a **Task app** is changing the **status** and the **percentage of completion** of a task individually.
+Basically, we want to individually change the **status** and the **percentage of completion** of a task, in a **Task app**,.
 
-More globally, we want to **change all tasks status** to postponed or in Progress for example.
+More globally, we want to **change all tasks status** to "postponed" or "in progress" for example.
 
-Download the **Starter project** and go right to the **Actions section**.
+Download the **Starter project** and go straight to the **Actions section**.
 
 <div markdown="1" style="text-align: center; margin-top: 20px; margin-bottom: 20px">
 
@@ -23,20 +23,20 @@ As we've seen before in the [Action section documentation](actions.html#ios-app-
 * Entity actions
 * Table actions
 
-Let's focus first on Entity actions!
+So first, let's focus on the Entity actions!
 
 
 ## Entity actions
 
-### STEP 1. Entity action in Action section
+### STEP 1. Entity action in Actions section
 
-In this Actions section, you will be able to define all your actions **names**, **icons**, **labels**, the **table** you want the action to be available in and the **scope** you want actions to be applied on.
+In this Actions section, you will be able to define all your action **names**, **icons**, and **labels**, as well as the **table** and the **scope** you want actions to be applied on.
 
-The action section is quite empty when you open it for the first time, so click on the **Plus button** at the bottom left to add your first action!
+The action section is quite empty when you open it for the first time, so click on the **Plus button**, at the bottom left corner, to add your first action!
 
 ![Create action](assets/en/actions/Create-action.png)
 
-Let's define first an action that will **change a task status** to "Complete" and put the **percentage of completion** to 100%.
+Let's define an action that will **change a task status** to "Complete" and put the **percentage of completion** to 100%.
 
 To define this action:
 
@@ -44,16 +44,16 @@ To define this action:
 * Select the **Done icon** from the icon library
 * Enter **Done** in **Short Labels**
 * Enter **Task Done** in **Long Labels**
-* Select the **Tasks** table from **Tables** list
-* Select **Current record** from **Scope** list
+* Select the **Tasks** table from the **Tables** list
+* Select **Current record** from the **Scope** list
 
 ![Done action definition](assets/en/actions/Done-action-definition.png)
 
 ### STEP 2. Create and edit the Action Database Method
 
-Now that your action is defined in the Project Editor, you have to create the [**On Mobile App Action**](https://livedoc.4d.com/4D-Language-Reference-17-R5/Database-Methods/On-Mobile-App-Action-database-method.301-4286697.en.html) database Method.
+Now that your action is defined in the Project Editor, you need to create the [**On Mobile App Action**](https://livedoc.4d.com/4D-Language-Reference-17-R5/Database-Methods/On-Mobile-App-Action-database-method.301-4286697.en.html) database Method.
 
-Do to so, click on **Create button** at the bottom right of the action table and enter the following code in the **On Mobile App Action** database method:
+Do to so, click on the **Create** button at the bottom right corner of the action table and enter the following code in the **On Mobile App Action** database method:
 
 ```4d
 C_OBJECT($0)
@@ -89,7 +89,7 @@ $0:=$result  // Informations returned to mobile application
 
 ### STEP 3. Create a "modifyStatus" Method
 
-Once your database method has been edited, you have to create a **modifyStatus** Method that will make the job :
+Once your database method is edited, you need to create a **modifyStatus** Method that will do the job:
 
 ```4d
 C_OBJECT($0)
@@ -134,7 +134,7 @@ $0:=$out
 
 ```
 
-Build and Run you app and there you go! Your **Done action** is available when you swipe left a cell in Listform, as well as when you click on the **generic action button** in the navigation bar of the Detail form.
+Build and Run you app... and there you go! Your **Done action** is available when you swipe a cell of the Listform on the left, as well as when you click on the **generic action button** in the navigation bar of the Detail form.
 
 ![Done action](assets/en/actions/Entity-action-Done.png)
 
@@ -142,22 +142,22 @@ Build and Run you app and there you go! Your **Done action** is available when y
 
 ### STEP 1. Table action in Action section
 
-Now, imagine that you are going on holidays and you want to **change all your tasks status** to "Postponed".
+Now, suppose you're on holidays and you want to **change all your tasks status** to "Postponed".
 
 Let's define this action from the Action section:
 
-* Enter **postponeAll** in **Names field**
+* Enter **postponeAll** in the **Names field**
 * Select the **Postponed icon** from the icon library
 * Enter **Postpone All** in **Short Labels**
 * Enter **Postpone All** in **Long Labels**
-* Select the **Tasks** table from **Tables** list
-* Select **Table** from **Scope** list
+* Select the **Tasks** table from the **Tables** list
+* Select **Table** from the **Scope** list
 
 ![Postponed action definition](assets/en/actions/PostponedAll-action-definition.png)
 
 ### STEP 2. Edit the Action method
 
-Click on the **Edit button** at the bottom right of the action table to complete the **On Mobile App Action** database method :
+Click on the **Edit button** at the bottom right corner of the action table to complete the **On Mobile App Action** database method :
 
 ```4d
 C_OBJECT($0)
@@ -235,13 +235,13 @@ $0:=$out
 
 ```
 
-Build and Run your app! You will find a new **generic button** in the navigation bar of your Lisform. Click on it to trigger the **Postpone All** action.
+Now, build and run your app! You will find a new **generic button** in the navigation bar of your Lisform. Click on it to trigger the **Postpone All** action.
 
 ![Final result Postponed Action](assets/en/actions/ListForm-table-action-tableview-tuto.png)
 
-## Where to Go From Here?
+## Where to go from here?
 
-Congratulations! You've just added 2 actions to your iOS app. You are now able to add all actions you need to your Tasks app!
+Congratulations! You've just added 2 actions to your iOS app. You are now able to add all the actions you need to your Tasks app!
 
 ![Final result All Action](assets/en/actions/ListForm-entity-action-tableview.png)
 
